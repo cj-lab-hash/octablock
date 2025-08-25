@@ -1,0 +1,165 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Layout */
+.summary-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Card Base */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card-header {
+  padding: 10px 15px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.card-body {
+  padding: 15px;
+  background-color: #fafafa;
+}
+
+/* Card Themes */
+.card-settlement .card-header { background-color: #4a90e2; }
+.card-orders .card-header { background-color: #50c878; }
+.card-variations .card-header { background-color: #f5a623; }
+.card-net .card-header { background-color: #9b59b6; }
+.card-expenses .card-header { background-color: #e74c3c; }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+/* Net Settlement Highlight */
+.net-amount {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.net-amount.positive {
+  color: #27ae60;
+}
+
+.net-amount.negative {
+  color: #e74c3c;
+}
+
+/* Expenses List */
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.expense-item button {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.expenses-total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+.breakdown {
+  margin-top: 6px;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px dashed #e6e6e6;
+}
+
+.breakdown-row:last-child {
+  border-bottom: none;
+}
+
+.breakdown-row .label {
+  color: #666;
+}
+
+.breakdown-row .value {
+  font-weight: 600;
+}
+
+.net-amount {
+  font-size: 1.8em;  /* a bit bigger for clarity */
+  font-weight: 800;
+  margin-top: 12px;
+  text-align: left;  /* change to center if you prefer */
+}
+
+
+/* Buttons */
+.btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #357abd;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

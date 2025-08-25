@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Settlement Report</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="Picture.ico" type="image/x-con" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <h2>TikTok Seller Settlement Report</h2>
+
+  <!-- File Upload -->
+  <div style="text-align:center; margin-bottom:20px;">
+    <input type="file" id="fileInput" accept=".csv">
+  </div>
+
+  <!-- Report Info -->
+  <div id="reportInfo" style="text-align:center; margin-bottom:20px; font-size:14px;"></div>
+
+  <!-- Summary Container -->
+  <div id="summaryContainer"></div>
+
+  <!-- Data Table (hidden by default) -->
+  <table id="dataTable" style="display:none; margin-top:20px; width:100%;">
+    <thead></thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
