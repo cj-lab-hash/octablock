@@ -71,15 +71,16 @@ function runWorkflow() {
 
   Data.forEach(row => {
     const orderAmt = parseNumber(row["Order Amount"]);
-    let shipping = 0, tiktokCommissions = 0, totalDeductions = 0;
+    let shipping = 0, tiktokCommissions = 0, totalDeductions = 0;addeddeductions = 0
 
     if (orderAmt !== 0) {
       shipping = orderAmt * 0.0224;
+      addeddeductions = orderAmt * 0.055;
       const orderIdx = headers.indexOf("Order Amount");
       const offsetHeader = headers[orderIdx - 3];
       const offsetVal = parseNumber(row[offsetHeader]);
       tiktokCommissions = offsetVal * 0.073;
-      totalDeductions = shipping + tiktokCommissions;
+      totalDeductions = shipping + tiktokCommissions + addeddeductions;
       row["Settlement Amount"] = formatNumber(offsetVal - totalDeductions);
     } else {
       row["Settlement Amount"] = 0;
@@ -267,3 +268,4 @@ function updateNetSettlement() {
     netDiv.innerHTML = renderNetSettlement(settled);
   }
 }
+
